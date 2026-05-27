@@ -4,7 +4,7 @@ A premium tea website clone inspired by Two Leaves and a Bud.
 
 ## Live Demo
 
-https://your-live-link.netlify.app
+https://twoleaves-tea.vercel.app
 
 ## Built With
 
