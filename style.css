@@ -260,11 +260,6 @@ nav{
     line-height: 1.5;
     color: #444;
 }
-.product-image img{
-    width: 100%;
-    object-fit: contain;
-}
-
 .swiper-slide{
     width: 24rem !important;
 }
@@ -653,15 +648,6 @@ nav{
     overflow: visible;
     position: relative;
     margin-top: 6rem;
-}
-.arrow{
-    width: 55px;
-    height: 55px;
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color: white;
-    cursor: pointer;
 }
 #lattes .product-image{
     height: auto;
