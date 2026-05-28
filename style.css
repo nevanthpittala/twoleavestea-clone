@@ -70,6 +70,51 @@ nav{
     align-items: center;
     gap: 0.5rem;
 }
+#mobile-menu{
+    display: none;
+}
+
+@media (max-width:768px){
+    nav{
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 1rem 1.2rem;
+    }
+    #mobile-menu{
+        display: block;
+        font-size: 2rem;
+    }
+    #nav-left{
+        display: none;
+    }
+    #nav-left ul,
+    #nav-right ul{
+        display: none !important; 
+    }
+    #nav-logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #nav-logo img{
+        width: 100px;
+    }
+    #nav-right{
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        width: fit-content;
+    }
+    #cart svg{
+        width: 20px;
+        height: auto;
+    }
+}
 .circle-icon{
     width: 1.125rem;
     height: 1.125rem;
@@ -86,7 +131,6 @@ nav{
 .ri-star-fill{
     color: #edb51c;
 }
-
 #nav-right {
     display: flex;
     align-items: center;
@@ -161,6 +205,48 @@ nav{
     font-family: "Inter", sans-serif;
     cursor: pointer;
 }
+@media (max-width:768px){
+    #hero-content p,
+    #hero-content em,
+    #hero-content button{
+    display: none;
+    }
+    #hero-content h1{
+    font-size: 2rem;
+    line-height: 0.95;
+    text-align: center;
+    }
+    #hero-content{
+    padding: 1rem 1rem 0;
+    }
+    #brand-message h2{
+     font-size:2rem !important;
+    }
+   .swiper{
+    padding: 0 0rem 2rem !important;
+    }
+    
+   .product.swiper-slide{
+      width:85vw !important;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        display: none;
+    }
+    .product-card{
+      min-height: 22rem !important;
+      padding: 1rem !important;
+    }
+
+   .product-image{
+    height: 12rem;
+   }
+
+   .product-details h3{
+    font-size: 1.6rem;
+   }
+    
+}
 #brand-message{
     padding: 8rem 2rem;
     display: flex;
@@ -169,7 +255,7 @@ nav{
     text-align: center;
 }
 #brand-message h2{
-    font-family: "Cormorant Garamond", serif;
+    font-family: Reckless;
     font-size: 3rem;
     line-height: 1.1;
     font-weight: 500;
@@ -198,7 +284,6 @@ nav{
 .swiper{
     padding: 0 3rem 2rem;
 }
-
 .swiper-slide{
     height: auto;
 }
@@ -260,8 +345,8 @@ nav{
     line-height: 1.5;
     color: #444;
 }
-.swiper-slide{
-    width: 24rem !important;
+.product.swiper-slide{
+    width: 24rem;
 }
 .swiper-button-next,
 .swiper-button-prev{
@@ -305,7 +390,6 @@ nav{
 #discover-heading{
     max-width: 45rem;
 }
-
 #discover-heading span{
     display: inline-block;
     background-color: #f28b39;
@@ -318,7 +402,6 @@ nav{
     transform: rotate(-2deg);
     margin-bottom: 1.5rem;
 }
-
 #discover-heading h2{
     font-family: "Cormorant Garamond", serif;
     font-size: 4rem;
@@ -326,17 +409,14 @@ nav{
     font-weight: 500;
     margin-bottom: 3rem;
 }
-
 #discover-heading em{
     font-style: italic;
 }
-
 #discover-search{
     width: 100%;
     max-width: 45rem;
     margin-bottom: 4rem;
 }
-
 #discover-search input{
     width: 100%;
     padding: 1.2rem 1.5rem;
@@ -346,7 +426,6 @@ nav{
     font-size: 1.2rem;
     font-family: "Inter", sans-serif;
 }
-
 #discover-tags{
     display: flex;
     flex-wrap: wrap;
@@ -354,7 +433,6 @@ nav{
     gap: 1rem;
     max-width: 55rem;
 }
-
 #discover-tags button{
     padding: 0.8rem 1.2rem;
     border-radius: 999px;
@@ -443,8 +521,75 @@ nav{
     width: 10rem;
     z-index: 2;
 }
+
+@media (max-width:768px){
+    #origins{
+        min-height: auto;
+        padding: 7rem 1.5rem 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .origins-badge{
+        width: 7rem;
+        top: 1rem;
+        right: 1rem;
+    }
+    #origins-overlay{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #origins-overlay span{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        transform: rotate(-2deg);
+    }
+    #origins-overlay h2{
+        font-size: 5rem;
+        line-height: 0.9;
+        margin-bottom: 2rem;
+    }
+    #origins-overlay p{
+        font-size: 1.3rem;
+        line-height: 1.4;
+        margin-bottom: 3rem;
+    }
+    #origins-icons{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        justify-items: center;
+        margin-bottom: 3rem;
+    }
+    .origin-item:last-child{
+        grid-column: 1 / -1;
+    }
+    .origin-item{
+        width: auto;
+    }
+    .origin-item img{
+        width: 5rem;
+    }
+    .origin-item small{
+        font-size: 1rem;
+    }
+    #origins-overlay button{
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}
 #Reviews{
   padding: 8rem 5rem;
+}
+#reviews-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 #review-heading-wrapper{
     display: flex;
@@ -471,11 +616,7 @@ nav{
     max-width: 62rem;
     margin-bottom: 5rem;
 }
-#reviews-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
+
 .review-rows{
     min-width: 20rem;
     height: 35rem;
@@ -529,7 +670,6 @@ nav{
     align-items: center;
     gap: 1rem;
     padding: 0 1.2rem;
-    
 }
 .review-product-left img{
     width: 5rem;
@@ -557,6 +697,25 @@ nav{
     align-items: center;
     justify-content: center;
 }
+@media (max-width:768px){
+    #reviews-text{
+        display: none;
+    }
+    #reviews-cards{
+        display: grid;
+     grid-template-columns: 1fr;
+     gap: 2rem;
+    }
+    #Reviews{
+    padding: 5rem 1rem;
+    }
+    .review-product button{
+        width: 5rem;
+        min-width: 5rem;
+        padding: 0;
+        margin-right: 7px;
+    }
+}
 #coffee-era{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -567,11 +726,9 @@ nav{
     width: 100%;
     display: block;
 }
-
 #coffee-text{
     background-color: #2A2857;
     height: 100%;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -601,6 +758,18 @@ nav{
     border: none;
     cursor: pointer;
     font-family: Figtree;
+}
+@media (max-width:768px){
+    #coffee-era{
+    grid-template-columns: 1fr;
+}
+#coffee-text{
+    padding: 4rem 1rem;
+}
+.content{
+    width: 100%;
+    margin-left: 0;
+}
 }
 #lattes{
     background-color: #A86B2A;
@@ -653,12 +822,10 @@ nav{
     height: auto;
     padding: 0;
 }
-
 #lattes .product-image img{
     width: 125%;
     max-width:900px;
     object-fit: contain;
-
     transform: translateX(-2rem) translateY(-6rem);
 }
 .latte-card .product-info{
@@ -669,12 +836,9 @@ nav{
 .mini-tag{
     background-color: #Ffcb96;
     width: fit-content;
-
     padding: 0.3rem 0.8rem;
-
     border: 2px solid black;
     border-radius: 6px;
-
     font-weight: 900;
     font-size: 2rem;
 }
@@ -689,12 +853,9 @@ nav{
 }
 .product-info button{
     width: fit-content;
-
     padding: 1rem 3rem;
-
     border-radius: 999px;
     border: 1px solid black;
-
     background-color: white;
     cursor: pointer;
 }
@@ -705,109 +866,215 @@ nav{
     width: 10rem;
     z-index: 2;
 }
+@media (max-width:768px){
+    #lattes{
+        padding: 5rem 1rem;
+        overflow: hidden;
+    }
+    #lattes h1{
+        font-size: 3.2rem;
+    }
+    .top-tag{
+        font-size: 1.5rem;
+    }
+    .latte-card{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1.5rem 2rem;
+        margin-top: 12rem;
+        position: relative;
+    }
+    #lattes .product-image{
+        position: absolute;
+        top: -9rem;
+        left: 30%;
+        transform: translateX(-50%);
+        width: 110%;
+        display: flex;
+        justify-content: center;
+    }
+    #lattes .product-image img{
+        width: 120%;
+        max-width: 420px;
+        transform: none;
+    }
+    .product-info{
+        margin-top: 11rem;
+
+        align-items: center;
+        text-align: center;
+    }
+    .product-info h2{
+        font-size: 3rem;
+    }
+    .product-info p{
+        width: 100%;
+    }
+    #ket-img{
+        width: 6rem;
+        right: 1rem;
+    }
+}
 #journal{
     padding: 8rem 4rem;
     background-color: #fbf9eb;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 #journal-heading{
     text-align: center;
     max-width: 65rem;
-
     margin-bottom: 5rem;
 }
-
 #journal-heading span{
     background-color: #c8dbf7;
-
     padding: 0.4rem 1rem;
-
     border: 2px solid black;
     border-radius: 0.5rem;
-
     font-family: Midnight-semi;
     font-size: 2rem;
-
     display: inline-block;
-
     transform: rotate(-2deg);
-
     margin-bottom: 2rem;
 }
-
 #journal-heading h2{
     font-family: Reckless;
     font-size: 4.5rem;
     line-height: 1;
     font-weight: 400;
 }
-
 #journal-cards{
     width: 100%;
-
     display: grid;
     grid-template-columns: repeat(3,1fr);
-
     gap: 2rem;
-
     margin-bottom: 4rem;
 }
-
 .journal-card{
     background-color: white;
-
     border: 2px solid black;
     border-radius: 1.5rem;
-
     overflow: hidden;
 }
-
 .journal-card img{
     width: 100%;
     height: 22rem;
-
     object-fit: cover;
-
     display: block;
 }
-
 .journal-content{
     padding: 2rem;
 }
-
 .journal-content small{
     font-family: Figtree;
     font-weight: 700;
     letter-spacing: 1px;
 }
-
 .journal-content h3{
     font-family: Reckless;
     font-size: 2.2rem;
     line-height: 1;
-
     margin: 1rem 0;
 }
-
 .journal-content p{
     font-family: Figtree;
     font-size: 1.05rem;
     line-height: 1.6;
 }
-
 #journal-btn{
     padding: 1rem 4rem;
-
     border-radius: 999px;
     border: none;
-
     background-color: #2A2857;
     color: white;
-
     font-size: 1rem;
     cursor: pointer;
+}
+@media (max-width:768px){
+    #journal{
+        padding: 5rem 1rem;
+    }
+    #journal-heading{
+        margin-bottom: 3rem;
+    }
+    #journal-heading span{
+        font-size: 2rem;
+    }
+    #journal-heading h2{
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    #journal-cards{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .journal-card img{
+        height: 16rem;
+    }
+    .journal-content{
+        padding: 1.5rem;
+    }
+    .journal-content h3{
+        font-size: 1.8rem;
+    }
+    #journal-btn{
+        width: 100%;
+        padding: 1rem;
+    }
+}
+button{
+    transition: all 0.3s ease;
+}
+button:hover{
+    transform: translateY(-3px);
+}
+.product-card{
+    transition: all 0.3s ease;
+}
+.product-card:hover{
+    transform: translateY(-6px);
+}
+.review-rows{
+    transition: all 0.3s ease;
+}
+.review-rows:hover{
+    transform: translateY(-6px);
+}
+.journal-card{
+    transition: all 0.3s ease;
+}
+.journal-card:hover{
+    transform: translateY(-6px);
+}
+#discover-tags button:hover{
+    background-color: #201C1A;
+    color: white;
+}
+#nav-left li,
+#nav-right li{
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+#nav-left li:hover,
+#nav-right li:hover{
+    opacity: 0.6;
+}
+.latte-card{
+    transition: transform 0.3s ease;
+}
+.latte-card:hover{
+    transform: translateY(-4px);
+}
+#hero-content button,
+#explore-bt,
+#journal-btn{
+    transition: all 0.3s ease;
+}
+#hero-content button:hover,
+#explore-bt:hover,
+#journal-btn:hover{
+    background-color: white;
+    color: #2A2857;
+    border: 1px solid #2A2857;
 }
