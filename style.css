@@ -48,15 +48,13 @@ nav{
   padding: 0.625rem 0.9375rem;
   border: 0.0625rem solid #201C1A;
   border-radius: 1rem;
- backdrop-filter: blur(12px);
-  background-color: rgba(255,255,255,0.7);
+  background-color: white;
   flex-wrap: wrap;
+  position: sticky;
+  top: 15px;
+  z-index: 1000;
 }
-nav{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+
 #nav-left ul{
     display: flex;
     align-items: center;
@@ -76,12 +74,9 @@ nav{
 
 @media (max-width:768px){
     nav{
-        position: relative;
-
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         padding: 1rem 1.2rem;
     }
     #mobile-menu{
@@ -171,6 +166,8 @@ nav{
  background-position: center;
  background-repeat: no-repeat;
  min-height: 100vh;
+ margin-top: -99px;
+  padding-top: 95px;
 }
 #hero-content{
  max-width: 30rem;
